@@ -2,6 +2,7 @@ version: '3'
 services:
   node-app:
     container_name: node-app-container
+    image: agtaweel/docker-test
     ports:
       - 6060:4000
     env_file:
