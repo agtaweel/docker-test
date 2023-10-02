@@ -45,7 +45,7 @@ client
 
 app.get('/', (req, res) => {
     redisCleint.set('products', 'products.....');
-    res.send('<h1> Hello sdadfsds</h1>');
+    res.send('<h1> Hello from AWS</h1>');
 });
 
 app.get('/products', async (req, res) => {
