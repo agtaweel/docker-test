@@ -2,6 +2,7 @@ const express = require('express');
 // const mongoose = require('mongoose');
 const redis = require('redis');
 const {Client} = require('pg');
+const os = require('os');
 
 //connect to redis
 const REDIS_HOST = 'redis';
@@ -45,7 +46,8 @@ client
 
 app.get('/', (req, res) => {
     redisCleint.set('products', 'products.....');
-    res.send('<h1> Hello from AWS, using docker hub</h1>');
+    console.log(`traffic from ${os.hostname}`);
+    res.send('<h1> Hello ay klam</h1>');
 });
 
 app.get('/products', async (req, res) => {
